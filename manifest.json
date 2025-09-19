@@ -45,7 +45,7 @@
         "type": "panel",
         "id": "lavie.gemini.generator",
         "label": {
-          "default": "🐒悟空 AI图像生成",
+          "default": "🐒Wukong AI Image Generator",
           "en-US": "🐒Wukong AI Image Generator",
           "zh-CN": "🐒悟空 AI图像生成"
         },
