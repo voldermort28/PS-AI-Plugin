@@ -1,0 +1,92 @@
+{
+  "categories": {
+    "Nhiếp ảnh chân dung": [
+      {
+        "name": "Chân dung chuyên nghiệp",
+        "prompt": "专业人像摄影，柔和光线，高清细节，自然表情，专业摄影棚灯光，85mm镜头，浅景深，商业级质量"
+      },
+      {
+        "name": "lý quỳnh",
+        "prompt": "Restore an old photo with high fidelity. Maintain the original facial features, outlines, and fine details of the subject. Remove scratches, stains, and fading, while preserving natural texture and authenticity. Enhance clarity and sharpness without altering the person’s identity."
+      },
+      {
+        "name": "Chân dung đường phố",
+        "prompt": "街头人像摄影，自然光线，纪实风格，真实表情，城市背景，人文摄影，黑白或彩色，艺术感"
+      },
+      {
+        "name": "Chân dung thời trang",
+        "prompt": "时尚人像摄影，创意构图，现代服装，专业模特，时尚杂志风格，高对比度，艺术灯光"
+      }
+    ],
+    "Nhiếp ảnh phong cảnh": [
+      {
+        "name": "Phong cảnh tự nhiên",
+        "prompt": "自然风光摄影，壮丽景色，黄金时刻光线，广角镜头，高动态范围，4K超高清，专业风景摄影"
+      },
+      {
+        "name": "Cảnh đêm thành phố",
+        "prompt": "城市夜景摄影，霓虹灯光，长曝光，城市天际线，现代建筑，夜景氛围，高对比度"
+      },
+      {
+        "name": "Bình minh hoàng hôn",
+        "prompt": "日出日落摄影，温暖光线，天空渐变，剪影效果，自然色彩，浪漫氛围，专业风光摄影"
+      }
+    ],
+    "Nhiếp ảnh sản phẩm": [
+      {
+        "name": "Sản phẩm thương mại điện tử",
+        "prompt": "电商产品摄影，白色背景，专业灯光，产品细节，商业级质量，多角度展示，高清细节"
+      },
+      {
+        "name": "Sản phẩm sáng tạo",
+        "prompt": "创意产品摄影，艺术构图，创意背景，产品特写，商业广告风格，专业摄影，高质感"
+      },
+      {
+        "name": "Nhiếp ảnh ẩm thực",
+        "prompt": "美食摄影，诱人色彩，自然光线，食物特写，商业级质量，食欲感，专业美食摄影"
+      }
+    ],
+    "Sáng tác nghệ thuật": [
+      {
+        "name": "Nghệ thuật kỹ thuật số",
+        "prompt": "数字艺术创作，科幻风格，未来主义，高细节，艺术感，创意构图，专业数字艺术"
+      },
+      {
+        "name": "Phong cách minh họa",
+        "prompt": "插画风格，手绘质感，艺术插画，创意设计，色彩丰富，艺术感，专业插画"
+      },
+      {
+        "name": "Nghệ thuật ý tưởng",
+        "prompt": "概念艺术，创意设计，科幻元素，未来感，高细节，艺术构图，专业概念艺术"
+      }
+    ],
+    "Nhiếp ảnh kiến trúc": [
+      {
+        "name": "Kiến trúc hiện đại",
+        "prompt": "现代建筑摄影，几何线条，简洁构图，自然光线，建筑细节，专业建筑摄影，高质感"
+      },
+      {
+        "name": "Kiến trúc lịch sử",
+        "prompt": "历史建筑摄影，古典风格，文化氛围，建筑细节，历史感，专业建筑摄影，艺术构图"
+      }
+    ]
+  },
+  "quick_presets": [
+    {
+      "name": "Nhiếp ảnh độ phân giải cao",
+      "prompt": "高清摄影，专业级质量，4K分辨率，细节丰富，专业灯光，商业级摄影"
+    },
+    {
+      "name": "Sáng tác nghệ thuật",
+      "prompt": "艺术创作，创意构图，艺术感，色彩丰富，专业艺术，创意设计"
+    },
+    {
+      "name": "Nhiếp ảnh thương mại",
+      "prompt": "商业摄影，专业级质量，商业用途，高细节，专业灯光，商业级摄影"
+    },
+    {
+      "name": "Phong cách tự nhiên",
+      "prompt": "自然风格，自然光线，真实感，自然色彩，自然构图，自然摄影"
+    }
+  ]
+}

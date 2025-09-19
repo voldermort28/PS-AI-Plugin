@@ -1,0 +1,90 @@
+{
+    "manifestVersion": 6,
+    "id": "WKAI-Gemini",
+    "name": "Banana - ai4psplugin.com",
+    "version": "1.0.0",
+    "main": "index.html",
+    "host": {
+        "app": "PS",
+        "minVersion": "23.0.0"
+    },
+    "requiredPermissions": {
+        "localFileSystem": "fullAccess",
+        "launchProcess": {
+            "schemes": [
+                "http",
+                "https",
+                "ws",
+                "wss"
+            ],
+            "extensions": [
+                ".exe",
+                ".bat",
+                ".cmd"
+            ]
+        },
+        "network": {
+            "domains": "all"
+        },
+        "clipboard": "readAndWrite",
+        "webview": {
+            "allow": "yes",
+            "domains": "all",
+            "enableMessageBridge": "localAndRemote"
+        },
+        "ipc": {
+            "enablePluginCommunication": true
+        },
+        "allowCodeGenerationFromStrings": true
+    },
+    "uiEntry": {
+        "type": "panel"
+    },
+    "entrypoints": [
+      {
+        "type": "panel",
+        "id": "lavie.gemini.generator",
+        "label": {
+          "default": "🐒悟空 AI图像生成",
+          "en-US": "🐒Wukong AI Image Generator",
+          "zh-CN": "🐒悟空 AI图像生成"
+        },
+        "minimumSize": {
+          "width": 320,
+          "height": 720
+        },
+        "maximumSize": {
+          "width": 500,
+          "height": 1600
+        },
+        "preferredDockedSize": {
+          "width": 380,
+          "height": 900
+        },
+        "preferredFloatingSize": {
+          "width": 380,
+          "height": 900
+        },
+        "icons": [
+          {
+            "width": 23,
+            "height": 23,
+            "path": "icons/icon.png",
+            "scale": [1, 2],
+            "theme": ["darkest", "dark", "medium", "lightest", "light"],
+            "species": ["generic"]
+          }
+        ]
+      }
+    ],
+    "icons": [
+      {
+        "width": 48,
+        "height": 48,
+        "path": "icons/icon.png",
+        "scale": [1, 2],
+        "theme": ["darkest", "dark", "medium", "lightest", "light"],
+        "species": ["generic"]
+      }
+    ]
+}

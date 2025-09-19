@@ -1,0 +1,390 @@
+/* Gemini 特定样式 */
+
+/* 画幅比例选择器样式 */
+.aspect-ratio-selector {
+    position: relative;
+}
+
+.aspect-ratio-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.aspect-ratio-option {
+    padding: 8px;
+    border: 2px solid #e1e5e9;
+    border-radius: 6px;
+    background: #f8f9fa;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.75rem;
+}
+
+.aspect-ratio-option:hover {
+    border-color: #94a3b8;
+    background: #f1f5f9;
+}
+
+.aspect-ratio-option.selected {
+    border-color: #64748b;
+    background: #e2e8f0;
+    color: #1e293b;
+    font-weight: 600;
+}
+
+/* 进度指示器 */
+.progress-container {
+    margin: 15px 0;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e1e5e9;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: #e2e8f0;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #64748b, #475569);
+    border-radius: 3px;
+    transition: width 0.3s ease;
+    width: 0%;
+}
+
+.progress-text {
+    font-size: 0.8rem;
+    color: #64748b;
+    text-align: center;
+}
+
+/* 生成状态指示器 */
+.generation-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin: 10px 0;
+    border: 1px solid #e1e5e9;
+}
+
+.status-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #e2e8f0;
+    animation: pulse 2s infinite;
+}
+
+.status-indicator.generating {
+    background: #f59e0b;
+}
+
+.status-indicator.success {
+    background: #16a34a;
+    animation: none;
+}
+
+.status-indicator.error {
+    background: #dc2626;
+    animation: none;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.status-text {
+    font-size: 0.8rem;
+    color: #64748b;
+}
+
+/* 图像网格布局 */
+.image-grid.multiple-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.image-grid.multiple-images .image-item {
+    max-height: 200px;
+}
+
+.image-grid.multiple-images .image-item img {
+    max-height: 150px;
+}
+
+/* 批量操作按钮 */
+.batch-actions {
+    display: flex;
+    gap: 8px;
+    margin: 15px 0;
+    flex-wrap: wrap;
+}
+
+.batch-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.batch-btn.primary {
+    background: #0ea5e9;
+    color: white;
+}
+
+.batch-btn.primary:hover {
+    background: #0284c7;
+}
+
+.batch-btn.secondary {
+    background: #f59e0b;
+    color: white;
+}
+
+.batch-btn.secondary:hover {
+    background: #d97706;
+}
+
+.batch-btn.danger {
+    background: #dc2626;
+    color: white;
+}
+
+.batch-btn.danger:hover {
+    background: #b91c1c;
+}
+
+/* 通知样式 */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 1000;
+    font-size: 0.85rem;
+    max-width: 300px;
+    animation: slideIn 0.3s ease;
+}
+
+.notification.success {
+    background: #dcfce7;
+    color: #166534;
+    border-left: 4px solid #16a34a;
+}
+
+.notification.error {
+    background: #fee2e2;
+    color: #dc2626;
+    border-left: 4px solid #dc2626;
+}
+
+.notification.info {
+    background: #dbeafe;
+    color: #1e40af;
+    border-left: 4px solid #3b82f6;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* 工具提示 */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #1e293b;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.75rem;
+    line-height: 1.4;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #1e293b transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* 加载动画变体 */
+.loading-dots {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 10px;
+}
+
+.loading-dots div {
+    position: absolute;
+    top: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #64748b;
+    animation: loadingDots 1.4s infinite ease-in-out both;
+}
+
+.loading-dots div:nth-child(1) { left: 0; animation-delay: -0.32s; }
+.loading-dots div:nth-child(2) { left: 12px; animation-delay: -0.16s; }
+.loading-dots div:nth-child(3) { left: 24px; animation-delay: 0s; }
+
+@keyframes loadingDots {
+    0%, 80%, 100% {
+        transform: scale(0);
+    }
+    40% {
+        transform: scale(1);
+    }
+}
+
+/* 错误状态样式 */
+.error-state {
+    text-align: center;
+    padding: 30px 20px;
+    color: #dc2626;
+}
+
+.error-state .error-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.error-state h3 {
+    color: #dc2626;
+    margin-bottom: 10px;
+}
+
+.error-state p {
+    color: #64748b;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* 成功状态样式 */
+.success-state {
+    text-align: center;
+    padding: 30px 20px;
+    color: #16a34a;
+}
+
+.success-state .success-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.success-state h3 {
+    color: #16a34a;
+    margin-bottom: 10px;
+}
+
+/* 紧凑模式 */
+.compact-mode .form-group {
+    margin-bottom: 10px;
+}
+
+.compact-mode .form-group label {
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+}
+
+.compact-mode .form-group input,
+.compact-mode .form-group textarea,
+.compact-mode .form-group select {
+    padding: 8px;
+    font-size: 0.8rem;
+}
+
+.compact-mode .config-section {
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.compact-mode .upload-section {
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+/* 现代化主题样式 - 与主样式保持一致 */
+
+/* 强制覆盖所有输入框样式 - 确保颜色正确 */
+input[type="text"], 
+input[type="password"], 
+textarea, 
+select {
+    background: #ffffff !important;
+    color: #374151 !important;
+    border: 2px solid #d1d5db !important;
+    border-radius: 8px !important;
+}
+
+input[type="text"]:focus, 
+input[type="password"]:focus, 
+textarea:focus, 
+select:focus {
+    border-color: #3b82f6 !important;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+    outline: none !important;
+}
+
+/* 特别针对预设下拉菜单 */
+.preset-trigger {
+    background: #ffffff !important;
+    color: #374151 !important;
+    border: 2px solid #d1d5db !important;
+}
+
+.preset-trigger:focus {
+    border-color: #3b82f6 !important;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+}
