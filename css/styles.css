@@ -13,19 +13,19 @@
     line-height: 1.5;
     white-space: pre-line;
 }
-/* 放大“描述提示词 *”输入框高度 */
+/* Enlarge the height of the "Describe Prompt *" input box */
 .form-group textarea#prompt {
     min-height: 150px !important;
     height: 150px !important;
     line-height: 1.4;
 }
 
-/* 兼容主题/其他覆盖规则 */
+/* Compatibility with themes/other override rules */
 :root .form-group textarea#prompt {
     min-height: 150px !important;
     height: 150px !important;
 }
-/* 基础样式 */
+/* Basic Styles */
 * {
     margin: 0;
     padding: 0;
@@ -84,7 +84,7 @@ body {
     z-index: 1;
 }
 
-/* 语言切换按钮 */
+/* Language Switcher Button */
 .lang-switcher {
     margin-left: auto;
     background: rgba(255,255,255,0.2);
@@ -140,7 +140,7 @@ body {
     min-height: 600px;
 }
 
-/* 配置区域 */
+/* Configuration Section */
 .config-section {
     background: #ffffff;
     border: 1px solid #e2e8f0;
@@ -151,7 +151,7 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
-/* API输入组样式 */
+/* API Input Group Style */
 .api-input-group {
     display: flex;
     gap: 12px;
@@ -290,7 +290,7 @@ body {
     border: 1px solid #fecaca;
 }
 
-/* 上传区域 */
+/* Upload Section */
 .upload-section {
     margin-bottom: 6px;
     padding: 8px;
@@ -398,7 +398,7 @@ body {
     transform: scale(1.1);
 }
 
-/* 表单样式 */
+/* Form Styles */
 .form-group {
     margin-bottom: 6px;
     width: 100%;
@@ -438,7 +438,7 @@ body {
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
 }
 
-/* 自定义下拉（预设） */
+/* Custom Dropdown (Preset) */
 .preset-dropdown { position: relative; width: 100%; margin: 0; }
 .preset-trigger {
     width: 100% !important;
@@ -459,7 +459,7 @@ body {
 }
 .preset-trigger:focus { outline: none; border-color: #3b82f6; box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1); }
 .preset-menu {
-    position: fixed; /* 脱离父级裁剪 */
+    position: fixed; /* Detach from parent clipping */
     top: 0; left: 0;
     min-width: 280px;
     max-height: 320px;
@@ -469,13 +469,13 @@ body {
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     z-index: 9999;
-    overscroll-behavior: contain; /* 防止滚轮穿透到面板 */
+    overscroll-behavior: contain; /* Prevent scroll wheel from penetrating the panel */
 }
 
-/* 打开下拉时为容器增加底部占位，避免与下方重叠 */
+/* Add bottom placeholder to container when dropdown is open to avoid overlapping with content below */
 .preset-dropdown.open { margin-bottom: 300px; }
 
-/* 下拉展开时锁定面板滚动（UXP宿主会强推滚动到容器，这里强制关闭） */
+/* Lock panel scroll when dropdown is expanded (UXP host will force scroll to container, force close here) */
 html.no-scroll, body.no-scroll { overflow: hidden !important; overscroll-behavior: contain; }
 .main-content.no-scroll { overflow: hidden !important; }
 .preset-menu .group-title {
@@ -515,7 +515,7 @@ html.no-scroll, body.no-scroll { overflow: hidden !important; overscroll-behavio
     min-height: 200px;
 }
 
-/* 调整提示词输入框高度 */
+/* Adjust prompt input box height */
 #prompt {
     min-height: 100px;
     resize: vertical;
@@ -527,7 +527,7 @@ html.no-scroll, body.no-scroll { overflow: hidden !important; overscroll-behavio
     gap: 12px;
 }
 
-/* 快捷操作开关 */
+/* Quick Actions Switch */
 .quick-actions {
     display: flex;
     gap: 12px;
@@ -550,7 +550,7 @@ html.no-scroll, body.no-scroll { overflow: hidden !important; overscroll-behavio
     user-select: none;
 }
 
-/* 预设选择器样式 */
+/* Preset Selector Style */
 .form-group select optgroup {
     font-weight: 600;
     color: #64748b;
@@ -568,7 +568,7 @@ html.no-scroll, body.no-scroll { overflow: hidden !important; overscroll-behavio
     background-color: #f1f5f9;
 }
 
-/* 开关样式 */
+/* Switch Style */
 .switch {
     position: relative;
     display: inline-block;
@@ -668,7 +668,7 @@ input:checked + .slider:hover {
     cursor: not-allowed;
 }
 
-/* 加载状态 */
+/* Loading State */
 .loading {
     text-align: center;
     padding: 40px 20px;
@@ -700,7 +700,7 @@ input:checked + .slider:hover {
     100% { transform: rotate(360deg); }
 }
 
-/* 结果区域 */
+/* Results Section */
 .results {
     margin-top: 20px;
     padding: 0;
@@ -711,7 +711,7 @@ input:checked + .slider:hover {
     overflow: hidden;
 }
 
-/* 结果区域头部 */
+/* Results Section Header */
 .results-header {
     display: flex;
     justify-content: space-between;
@@ -728,7 +728,7 @@ input:checked + .slider:hover {
     font-weight: 600;
 }
 
-/* 关闭按钮样式 */
+/* Close Button Style */
 .close-results-btn {
     background: none;
     border: none;
@@ -865,7 +865,7 @@ input:checked + .slider:hover {
     color: #dc2626;
 }
 
-/* 空状态 */
+/* Empty State */
 .empty-state {
     text-align: center;
     padding: 60px 20px;
@@ -902,7 +902,7 @@ input:checked + .slider:hover {
     max-width: 300px;
 }
 
-/* 响应式设计 */
+/* Responsive Design */
 @media (max-width: 400px) {
     .main-content {
         padding: 15px;
@@ -918,9 +918,9 @@ input:checked + .slider:hover {
     }
 }
 
-/* 现代化主题样式 */
+/* Modern Theme Styles */
 
-/* 强制覆盖所有输入框样式 */
+/* Force override all input box styles */
 input[type="text"], 
 input[type="password"], 
 textarea, 
@@ -940,7 +940,7 @@ select:focus {
     outline: none !important;
 }
 
-/* 特别针对特定元素 - 使用最高优先级 */
+/* Specifically for certain elements - use highest priority */
 #presetTrigger,
 .preset-trigger {
     background: #ffffff !important;
@@ -989,7 +989,7 @@ select#batchSize:focus {
     background-color: #ffffff !important;
 }
 
-/* 生成按钮容器 */
+/* Generate Button Container */
 .generate-button-container {
     width: 100%;
     margin: 6px 0;
@@ -998,7 +998,7 @@ select#batchSize:focus {
     align-items: center;
 }
 
-/* 上传按钮容器 - 优化设计 */
+/* Upload Buttons Container - Optimized Design */
 .upload-buttons-container {
     display: flex;
     gap: 6px;
@@ -1010,7 +1010,7 @@ select#batchSize:focus {
     padding: 0 4px;
 }
 
-/* 生成按钮样式 */
+/* Generate Button Style */
 .generate-button {
     flex: 1;
     padding: 14px 24px;
@@ -1035,7 +1035,7 @@ select#batchSize:focus {
     box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
 }
 
-/* 余量检测按钮样式 */
+/* Usage Check Button Style */
 .usage-button {
     flex: 0 0 auto;
     padding: 14px 20px;
@@ -1055,7 +1055,7 @@ select#batchSize:focus {
     white-space: nowrap;
 }
 
-/* 按钮文本自适应：不改变按钮宽度，按需缩小字体 */
+/* Button text auto-fit: do not change button width, shrink font size as needed */
 .fit-text {
     display: inline-flex;
     align-items: center;
@@ -1065,7 +1065,7 @@ select#batchSize:focus {
 .generate-button,
 .usage-button,
 .upload-button {
-    min-width: 0; /* 允许在flex布局中收缩，避免被长文案撑大 */
+    min-width: 0; /* Allow shrinking in flex layout to avoid being stretched by long text */
 }
 
 .fit-text span.fit { display: inline-block; }
@@ -1083,7 +1083,7 @@ select#batchSize:focus {
 }
 
 .upload-button {
-    flex: 0 0 88px; /* 调小宽度 */
+    flex: 0 0 88px; /* Adjust width */
     padding: 8px 4px;
     background: linear-gradient(135deg, #10b981 0%, #059669 100%);
     border: none;
@@ -1112,7 +1112,7 @@ select#batchSize:focus {
     box-shadow: 0 2px 4px rgba(99, 102, 241, 0.2);
 }
 
-/* 多预览框容器 - 优化布局 */
+/* Multi-preview Container - Optimized Layout */
 .multi-preview-container {
     display: flex;
     gap: 8px;
@@ -1150,7 +1150,7 @@ select#batchSize:focus {
     font-weight: 600;
 }
 
-/* 槽位选择状态 */
+/* Slot Selection State */
 .preview-slot.selected {
     transform: scale(1.05);
     transition: transform 0.2s ease;
@@ -1166,7 +1166,7 @@ select#batchSize:focus {
     font-weight: bold;
 }
 
-/* 图像预览容器 - 优化尺寸 */
+/* Image Preview Container - Optimized Size */
 .preview-container {
     width: 84px;
     height: 84px;
@@ -1187,7 +1187,7 @@ select#batchSize:focus {
     border-radius: 6px;
     overflow: hidden;
     background: #f8fafc;
-    /* 现代化棋盘格背景 */
+    /* Modern checkerboard background */
     background-image: 
         linear-gradient(45deg, #e2e8f0 25%, transparent 25%), 
         linear-gradient(-45deg, #e2e8f0 25%, transparent 25%), 
@@ -1310,7 +1310,7 @@ select#batchSize:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 10; /* 提高删除按钮层级，避免被图片覆盖 */
+    z-index: 10; /* Increase z-index of delete button to avoid being covered by image */
     transition: all 0.3s ease;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
@@ -1340,7 +1340,7 @@ select#batchSize:focus {
     background: #357abd;
 }
 
-/* 最高优先级样式覆盖 - 确保输入框颜色正确 */
+/* Highest priority style override - ensure correct input box color */
 body * {
     box-sizing: border-box;
 }

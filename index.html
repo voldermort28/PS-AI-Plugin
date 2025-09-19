@@ -4,172 +4,172 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/gemini-styles.css">
-    <title>悟空 AI图像生成</title>
+    <title>Wukong AI Image Generator</title>
 </head>
 <body>
     <div class="app-container">
-        <!-- 现代化头部区域 -->
+        <!-- Modern Header Section -->
         <div class="header">
             <div class="header-content">
                 <div class="header-icon">🐒</div>
                 <div class="header-text">
-                    <h1 data-i18n="app.title">悟空 AI图像生成</h1>
-                    <p data-i18n="app.subtitle">基于 Google Gemini API 的智能图像生成工具</p>
+                    <h1 data-i18n="app.title">Wukong AI Image Generator</h1>
+                    <p data-i18n="app.subtitle">Intelligent Image Generation Tool Based on Google Gemini API</p>
                 </div>
-                <button id="langSwitcher" class="lang-switcher" title="切换语言" aria-label="切换语言">🌐</button>
+                <button id="langSwitcher" class="lang-switcher" title="Switch Language" aria-label="Switch Language">🌐</button>
             </div>
         </div>
 
         <div class="main-content">
-            <!-- API 配置区域（隐藏标题） -->
+            <!-- API Configuration Section (Title Hidden) -->
             <div class="config-section" id="configSection">
                 <div class="form-group">
                     <div class="api-input-group">
                         <input type="password" id="apiKey" name="apiKey" placeholder="API Key *" required>
-                        <button type="button" id="toggleApiKey" class="toggle-btn" data-i18n="btn.show">显示</button>
-                        <button type="button" id="saveConfig" class="save-btn" data-i18n="btn.save">保存</button>
+                        <button type="button" id="toggleApiKey" class="toggle-btn" data-i18n="btn.show">Show</button>
+                        <button type="button" id="saveConfig" class="save-btn" data-i18n="btn.save">Save</button>
                     </div>
                     <div id="configStatus" class="config-status"></div>
                 </div>
             </div>
 
-            <!-- 图像上传区域 -->
+            <!-- Image Upload Section -->
             <div class="upload-section">
-                <!-- 开始生成按钮和余量检测按钮 - 一行 -->
+                <!-- Generate Button and Usage Check Button - One Line -->
                 <div class="generate-button-container">
-                    <button id="generateBtn" class="generate-button fit-text" data-i18n="btn.generate">开始生成</button>
-                    <button id="queryUsageBtn" class="usage-button fit-text" data-i18n="btn.usage">余量检测</button>
+                    <button id="generateBtn" class="generate-button fit-text" data-i18n="btn.generate">Generate</button>
+                    <button id="queryUsageBtn" class="usage-button fit-text" data-i18n="btn.usage">Check Usage</button>
                 </div>
-                <!-- 操作按钮 - 三个按钮一行 -->
+                <!-- Action Buttons - Three Buttons per Line -->
                 <div class="upload-buttons-container">
-                    <button id="uploadFullCanvas" class="upload-button fit-text" data-i18n="btn.fullCanvas">全部画布</button>
-                    <button id="uploadLayerCanvas" class="upload-button fit-text" data-i18n="btn.layerCanvas">图层画布</button>
-                    <button id="uploadQuickLayer" class="upload-button fit-text" data-i18n="btn.quickLayer">快速图层</button>
+                    <button id="uploadFullCanvas" class="upload-button fit-text" data-i18n="btn.fullCanvas">Full Canvas</button>
+                    <button id="uploadLayerCanvas" class="upload-button fit-text" data-i18n="btn.layerCanvas">Layer Canvas</button>
+                    <button id="uploadQuickLayer" class="upload-button fit-text" data-i18n="btn.quickLayer">Quick Layer</button>
                 </div>
                 <div class="multi-preview-container">
-                    <!-- 预览框1 -->
+                    <!-- Preview Box 1 -->
                     <div class="preview-slot" data-slot="0">
                         <div class="preview-container">
                             <div class="image-drop-zone clickable-drop-zone" id="imageDropZone0">
                                 <div class="upload-status"></div>
-                                <div class="drop-text" data-i18n="hint.drop">点击按钮获取图像</div>
-                                <img id="imagePreview0" class="image-preview" alt="预览图像">
+                                <div class="drop-text" data-i18n="hint.drop">Click button to get image</div>
+                                <img id="imagePreview0" class="image-preview" alt="Preview Image">
                                 <div class="loading-indicator" style="display: none;">
                                     <div class="spinner"></div>
-                                    <div data-i18n="hint.uploading">上传中...</div>
+                                    <div data-i18n="hint.uploading">Uploading...</div>
                                 </div>
                                 <button class="remove-image-btn" onclick="window.imageHandler.removeImage(0)">×</button>
                             </div>
                         </div>
-                        <div class="slot-label" data-i18n="slot.1">图像 1</div>
+                        <div class="slot-label" data-i18n="slot.1">Image 1</div>
                     </div>
                     
-                    <!-- 预览框2 -->
+                    <!-- Preview Box 2 -->
                     <div class="preview-slot" data-slot="1">
                         <div class="preview-container">
                             <div class="image-drop-zone clickable-drop-zone" id="imageDropZone1">
                                 <div class="upload-status"></div>
-                                <div class="drop-text" data-i18n="hint.drop">点击按钮获取图像</div>
-                                <img id="imagePreview1" class="image-preview" alt="预览图像">
+                                <div class="drop-text" data-i18n="hint.drop">Click button to get image</div>
+                                <img id="imagePreview1" class="image-preview" alt="Preview Image">
                                 <div class="loading-indicator" style="display: none;">
                                     <div class="spinner"></div>
-                                    <div data-i18n="hint.uploading">上传中...</div>
+                                    <div data-i18n="hint.uploading">Uploading...</div>
                                 </div>
                                 <button class="remove-image-btn" onclick="window.imageHandler.removeImage(1)">×</button>
                             </div>
                         </div>
-                        <div class="slot-label" data-i18n="slot.2">图像 2</div>
+                        <div class="slot-label" data-i18n="slot.2">Image 2</div>
                     </div>
                     
-                    <!-- 预览框3 -->
+                    <!-- Preview Box 3 -->
                     <div class="preview-slot" data-slot="2">
                         <div class="preview-container">
                             <div class="image-drop-zone clickable-drop-zone" id="imageDropZone2">
                                 <div class="upload-status"></div>
-                                <div class="drop-text" data-i18n="hint.drop">点击按钮获取图像</div>
-                                <img id="imagePreview2" class="image-preview" alt="预览图像">
+                                <div class="drop-text" data-i18n="hint.drop">Click button to get image</div>
+                                <img id="imagePreview2" class="image-preview" alt="Preview Image">
                                 <div class="loading-indicator" style="display: none;">
                                     <div class="spinner"></div>
-                                    <div data-i18n="hint.uploading">上传中...</div>
+                                    <div data-i18n="hint.uploading">Uploading...</div>
                                 </div>
                                 <button class="remove-image-btn" onclick="window.imageHandler.removeImage(2)">×</button>
                             </div>
                         </div>
-                        <div class="slot-label" data-i18n="slot.3">图像 3</div>
+                        <div class="slot-label" data-i18n="slot.3">Image 3</div>
                     </div>
                 </div>
             </div>
 
-            <!-- 画幅比例（隐藏整个控件，仅保留代码） -->
+            <!-- Aspect Ratio (Whole control hidden, code retained) -->
             <div class="form-group" style="display: none;">
                 <select id="aspectRatio" name="aspectRatio">
-                    <option value="">原画幅</option>
-                    <option value="1:1">1:1 正方形 (512x512)</option>
-                    <option value="3:4">3:4 竖屏 (512x683)</option>
-                    <option value="4:3">4:3 横屏 (683x512)</option>
-                    <option value="9:16">9:16 手机竖屏 (512x910)</option>
-                    <option value="16:9">16:9 宽屏 (910x512)</option>
-                    <option value="2:3">2:3 海报竖版 (512x768)</option>
-                    <option value="3:2">3:2 海报横版 (768x512)</option>
+                    <option value="">Original Aspect Ratio</option>
+                    <option value="1:1">1:1 Square (512x512)</option>
+                    <option value="3:4">3:4 Portrait (512x683)</option>
+                    <option value="4:3">4:3 Landscape (683x512)</option>
+                    <option value="9:16">9:16 Phone Portrait (512x910)</option>
+                    <option value="16:9">16:9 Widescreen (910x512)</option>
+                    <option value="2:3">2:3 Poster Portrait (512x768)</option>
+                    <option value="3:2">3:2 Poster Landscape (768x512)</option>
                 </select>
             </div>
 
-            <!-- 预设提示词选择（自定义下拉，隐藏标题） -->
+            <!-- Preset Prompt Selection (Custom dropdown, title hidden) -->
             <div class="form-group">
                 <div id="presetDropdown" class="preset-dropdown">
-                    <div id="presetTrigger" class="preset-trigger" tabindex="0" data-i18n="preset.placeholder">选择预设模版...</div>
+                    <div id="presetTrigger" class="preset-trigger" tabindex="0" data-i18n="preset.placeholder">Select a preset template...</div>
                     <div id="presetMenu" class="preset-menu" style="display:none;"></div>
                 </div>
             </div>
 
-            <!-- 提示词输入（隐藏标题） -->
+            <!-- Prompt Input (Title hidden) -->
             <div class="form-group">
                 <textarea id="prompt" name="prompt" placeholder="描述提示词 *" data-i18n-attr="placeholder" data-i18n="prompt.placeholder" required></textarea>
             </div>
 
-            <!-- 生成数量选择（隐藏标题） -->
+            <!-- Generation Count Selection (Title hidden) -->
             <div class="form-group">
                 <select id="batchSize" name="batchSize">
-                    <option value="1" data-i18n="batch.1">1张图片</option>
-                    <option value="2" data-i18n="batch.2">2张图片</option>
-                    <option value="3" data-i18n="batch.3">3张图片</option>
-                    <option value="4" data-i18n="batch.4">4张图片</option>
+                    <option value="1" data-i18n="batch.1">1 Image</option>
+                    <option value="2" data-i18n="batch.2">2 Images</option>
+                    <option value="3" data-i18n="batch.3">3 Images</option>
+                    <option value="4" data-i18n="batch.4">4 Images</option>
                 </select>
             </div>
 
-            <!-- 模型类型 - 隐藏 -->
+            <!-- Model Type - Hidden -->
             <div class="form-group" style="display: none;">
-                <label for="modelType">模型类型</label>
+                <label for="modelType">Model Type</label>
                 <select id="modelType" name="modelType">
-                    <option value="gemini-2.5-flash-image-preview" selected>Gemini 2.5 Flash (图像预览)</option>
-                    <option value="gemini-2.0-flash-exp">Gemini 2.0 Flash (实验版)</option>
+                    <option value="gemini-2.5-flash-image-preview" selected>Gemini 2.5 Flash (Image Preview)</option>
+                    <option value="gemini-2.0-flash-exp">Gemini 2.0 Flash (Experimental)</option>
                 </select>
             </div>
 
-            <!-- 快捷操作开关 -->
+            <!-- Quick Actions Switch -->
             <div class="quick-actions">
                 <div class="switch-container">
                     <label class="switch">
                         <input type="checkbox" id="stretchToCanvasSwitch">
                         <span class="slider"></span>
                     </label>
-                    <span class="switch-label" data-i18n="switch.stretch">自动缩放到画布</span>
+                    <span class="switch-label" data-i18n="switch.stretch">Auto-scale to canvas</span>
                 </div>
             </div>
 
-            <!-- 生成按钮已上移至上传区域 -->
+            <!-- Generate button moved up to the upload section -->
 
-            <!-- 加载状态 -->
+            <!-- Loading State -->
             <div class="loading" id="loading" style="display: none;">
                 <div class="spinner"></div>
-                <p data-i18n="loading.generating">正在生成图像，请稍候...</p>
+                <p data-i18n="loading.generating">Generating images, please wait...</p>
             </div>
 
-            <!-- 结果区域 -->
+            <!-- Results Section -->
             <div class="results compact" id="results" style="display: none;">
                 <div class="results-header">
-                    <h3 data-i18n="results.title">查询结果</h3>
-                    <button class="close-results-btn" id="closeResultsBtn" title="关闭" data-i18n-attr="title" data-i18n="results.closeTitle">×</button>
+                    <h3 data-i18n="results.title">Query Results</h3>
+                    <button class="close-results-btn" id="closeResultsBtn" title="Close" data-i18n-attr="title" data-i18n="results.closeTitle">×</button>
                 </div>
                 <div class="text-output" id="textOutput"></div>
             </div>

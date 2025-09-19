@@ -1,6 +1,6 @@
-/* Gemini 特定样式 */
+/* Gemini Specific Styles */
 
-/* 画幅比例选择器样式 */
+/* Aspect Ratio Selector Style */
 .aspect-ratio-selector {
     position: relative;
 }
@@ -35,7 +35,7 @@
     font-weight: 600;
 }
 
-/* 进度指示器 */
+/* Progress Indicator */
 .progress-container {
     margin: 15px 0;
     padding: 10px;
@@ -67,7 +67,7 @@
     text-align: center;
 }
 
-/* 生成状态指示器 */
+/* Generation Status Indicator */
 .generation-status {
     display: flex;
     align-items: center;
@@ -111,7 +111,7 @@
     color: #64748b;
 }
 
-/* 图像网格布局 */
+/* Image Grid Layout */
 .image-grid.multiple-images {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -126,7 +126,7 @@
     max-height: 150px;
 }
 
-/* 批量操作按钮 */
+/* Batch Action Buttons */
 .batch-actions {
     display: flex;
     gap: 8px;
@@ -173,7 +173,7 @@
     background: #b91c1c;
 }
 
-/* 通知样式 */
+/* Notification Styles */
 .notification {
     position: fixed;
     top: 20px;
@@ -216,7 +216,7 @@
     }
 }
 
-/* 工具提示 */
+/* Tooltip */
 .tooltip {
     position: relative;
     display: inline-block;
@@ -257,7 +257,7 @@
     opacity: 1;
 }
 
-/* 加载动画变体 */
+/* Loading Animation Variant */
 .loading-dots {
     display: inline-block;
     position: relative;
@@ -288,7 +288,7 @@
     }
 }
 
-/* 错误状态样式 */
+/* Error State Style */
 .error-state {
     text-align: center;
     padding: 30px 20px;
@@ -311,7 +311,7 @@
     line-height: 1.5;
 }
 
-/* 成功状态样式 */
+/* Success State Style */
 .success-state {
     text-align: center;
     padding: 30px 20px;
@@ -328,7 +328,7 @@
     margin-bottom: 10px;
 }
 
-/* 紧凑模式 */
+/* Compact Mode */
 .compact-mode .form-group {
     margin-bottom: 10px;
 }
@@ -355,9 +355,9 @@
     margin-bottom: 15px;
 }
 
-/* 现代化主题样式 - 与主样式保持一致 */
+/* Modern Theme Styles - Consistent with main styles */
 
-/* 强制覆盖所有输入框样式 - 确保颜色正确 */
+/* Force override all input box styles - ensure correct color */
 input[type="text"], 
 input[type="password"], 
 textarea, 
@@ -377,7 +377,7 @@ select:focus {
     outline: none !important;
 }
 
-/* 特别针对预设下拉菜单 */
+/* Specifically for preset dropdown menu */
 .preset-trigger {
     background: #ffffff !important;
     color: #374151 !important;
